@@ -1,0 +1,232 @@
+{% extends "MainSite/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="content container">
+            <div class="page-wrapper">
+                <header class="page-heading clearfix">
+                    <h1 class="heading-title pull-left">Course List</h1>
+                    <div class="breadcrumbs pull-right">
+                        <ul class="breadcrumbs-list">
+                            <li class="breadcrumbs-label">You are here:</li>
+                            <li><a href="{% url "home" %}">Home</a><i class="fa fa-angle-right"></i></li>
+                            <li class="current">Course List</li>
+                        </ul>
+                    </div><!--//breadcrumbs-->
+                </header>
+                <div class="page-content">
+                    <div class="row page-row">
+                        <div class="courses-wrapper col-md-8 col-sm-7">
+                            <div class="featured-courses tabbed-info page-row">
+                                <ul class="nav nav-tabs">
+                                  <li class="active"><a href="#tab1" data-toggle="tab">CSE</a></li>
+                                  <li><a href="#tab2" data-toggle="tab">EEE</a></li>
+                                  <li><a href="#tab3" data-toggle="tab">CE</a></li>
+                                </ul>
+
+                                <div class="tab-content">
+                                  <div class="tab-pane active" id="tab1">
+                                      <div class="row">
+                                          <div class="item col-md-3 col-sm-6 col-xs-6">
+                                              <img class="img-responsive" src="{% static "img/Academic/cse/f_image.jpg" %}"  alt="" />
+                                              <p class="text-center"><a href="#">Web Design</a></p>
+                                          </div><!--//item-->
+                                          <div class="item col-md-3 col-sm-6 col-xs-6">
+                                              <img class="img-responsive" src="{% static "img/Academic/cse/f_image.jpg" %}"  alt="" />
+                                              <p class="text-center"><a href="#">Spanish</a></p>
+                                          </div><!--//item-->
+                                          <div class="clearfix visible-xs"></div>
+                                          <div class="item col-md-3 col-sm-6 col-xs-6">
+                                              <img class="img-responsive" src="{% static "img/Academic/cse/f_image.jpg" %}"  alt="" />
+                                              <p class="text-center"><a href="#">Digital Marketing</a></p>
+                                          </div><!--//item-->
+                                          <div class="item col-md-3 col-sm-6 col-xs-6">
+                                              <img class="img-responsive" src="{% static "img/Academic/cse/f_image.jpg" %}"  alt="" />
+                                              <p class="text-center"><a href="#">Accounting</a></p>
+                                          </div><!--//item-->
+                                      </div><!--//row-->
+                                  </div>
+
+                                  <div class="tab-pane" id="tab2">
+                                      <div class="row">
+                                          <div class="item col-md-3 col-sm-6 col-xs-6">
+                                              <img class="img-responsive" src="{% static "img/Academic/eee/f_image.png" %}"  alt="" />
+                                              <p class="text-center"><a href="#">Aliquam tortor massa</a></p>
+                                          </div><!--//item-->
+                                          <div class="item col-md-3 col-sm-6 col-xs-6">
+                                              <img class="img-responsive" src="{% static "img/Academic/eee/f_image.png" %}"  alt="" />
+                                              <p class="text-center"><a href="#">Maecenas mattis</a></p>
+                                          </div><!--//item-->
+                                          <div class="clearfix visible-xs"></div>
+                                          <div class="item col-md-3 col-sm-6 col-xs-6">
+                                              <img class="img-responsive" src="{% static "img/Academic/eee/f_image.png" %}"  alt="" />
+                                              <p class="text-center"><a href="#">Vivamus eu dui</a></p>
+                                          </div><!--//item-->
+                                          <div class="item col-md-3 col-sm-6 col-xs-6">
+                                              <img class="img-responsive" src="{% static "img/Academic/eee/f_image.png" %}"  alt="" />
+                                              <p class="text-center"><a href="#">Nullam porttitor</a></p>
+                                          </div><!--//item-->
+                                      </div><!--//row-->
+                                  </div>
+
+                                  <div class="tab-pane" id="tab3">
+                                      <div class="row">
+                                          <div class="item col-md-3 col-sm-6 col-xs-6">
+                                              <img class="img-responsive" src="{% static "img/Academic/ce/f_image.jpg" %}"  alt="" />
+                                              <p class="text-center"><a href="#">Aliquam tortor massa</a></p>
+                                          </div><!--//item-->
+                                          <div class="item col-md-3 col-sm-6 col-xs-6">
+                                              <img class="img-responsive" src="{% static "img/Academic/ce/f_image.jpg" %}"  alt="" />
+                                              <p class="text-center"><a href="#">Maecenas mattis</a></p>
+                                          </div><!--//item-->
+                                          <div class="clearfix visible-xs"></div>
+                                          <div class="item col-md-3 col-sm-6 col-xs-6">
+                                              <img class="img-responsive" src="{% static "img/Academic/ce/f_image.jpg" %}"  alt="" />
+                                              <p class="text-center"><a href="#">Vivamus eu dui</a></p>
+                                          </div><!--//item-->
+                                          <div class="item col-md-3 col-sm-6 col-xs-6">
+                                              <img class="img-responsive" src="{% static "img/Academic/ce/f_image.jpg" %}"  alt="" />
+                                              <p class="text-center"><a href="#">Nullam porttitor</a></p>
+                                          </div><!--//item-->
+                                      </div><!--//row-->
+                                  </div>
+                                </div>
+                            </div><!--//featured-courses-->
+
+
+                            <div class="course-list-header box clearfix">
+                                <div class="summary pull-left">Total <strong>{{ qs.count }}</strong> Courses</div>
+                                <div class="sort pull-right">
+                                   <form class="course-finder-form" action="#" method="GET">
+                                        <div class="row">
+                                            <div class="col-md-10 col-sm-10 depratment">
+
+                                                <select class="form-control depratment" name="q">
+                                                    <option value="Computer Science & Engineering">Computer Science & Engineering</option>
+                                                    <option value="Electrical & Electronic Engineering">Electrical & Electronic Engineering</option>
+                                                    <option value="Civil Engineering">Civil Engineering</option>
+
+                                                </select>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 keywords">
+                                                <button type="submit" class="btn btn-theme"><i class="fa fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div><!--//sort-->
+                            </div><!--//course-list-header-->
+
+
+                            <div class="course-item-header row-divider hidden-sm hidden-xs">
+                                <div class="row">
+                                    <div class="col-title col-md-4 col-sm-6"><strong>Course name</strong></div>
+                                    <div class="col-meta col-md-8 col-sm-6">
+                                        <div class="row">
+                                            <div class="col-start col-md-3"><strong>Course Code</strong></div>
+                                            <div class="col-duration col-md-4"><strong>Department</strong></div>
+                                            <div class="col-level col-md-2"><strong>Credit</strong></div>
+                                            <div class="col-location col-md-2"><strong>Semester</strong></div>
+                                        </div>
+                                    </div><!--//col-meta-->
+                                </div><!---//row-->
+                            </div><!--//course-item-header-->
+
+                            <article class="course-item row-divider">
+                                <div class="details row">
+                                    {% for ob in qs %}
+                                    <div class="col-title col-md-4 col-sm-6"><a href="{% url "Academic:course_detail" ob.course_name %}">{{ ob.course_title }}</a></div>
+                                    <div class="col-meta col-md-8 col-sm-6">
+                                        <div class="row">
+                                            <div class="col-start col-md-3">{{ ob.course_name }}<hr></div>
+                                            <div class="col-duration col-md-4">{{ ob.course_dept}}<hr></div>
+                                            <div class="col-level col-md-2">{{ob.credit  }}<hr></div>
+                                            <div class="col-location col-md-3">{{ ob.semester }}<hr></div>
+                                        </div>
+                                    </div><!--//col-meta-->
+                                    {% endfor %}
+                                </div><!--//details-->
+                            </article><!--//course-item-->
+
+                        <!-- Paginator -->
+
+                                {% include "Academic/paginator.html" with page=qs %}
+
+                         <!-- End Paginator -->
+
+                        </div>
+
+                        <aside class="page-sidebar  col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1">
+                            <section class="widget has-divider">
+                              <h1 class="section-heading text-highlight"><span class="line">Form Fill Up Going On</span></h1>
+                                <p style="padding-left: 10%">1st year 1st semester,2nd year 2nd semester form fill up going on.</p>
+                                <p class="promo-badge" style="margin: 0 auto">
+                                    <a href="#" style="color:red;">
+                                        <i class="fa fa-check-square-o fa-4x" aria-hidden="true"></i>
+
+                                        <br>
+                                        <span class="desc">Apply Online</span>
+                                    </a>
+
+                                </p>
+                            </section><!--//widget-->
+
+
+                            <section class="widget has-divider">
+                                  <h1 class="section-heading text-highlight"><span class="line">Admission Notice</span></h1>
+                                <p style="padding-left: 10%">Admission notice of 2016-17 session is published.</p>
+                                <a class="btn btn-theme" href="#" style="margin-left: 27%"><i class="fa fa-download"></i>Download now</a>
+                            </section><!--//widget-->
+
+                            <!--Testomonial-->
+
+                            <section class="widget row-divider">
+                                <h1 class="section-heading text-highlight"><span class="line">Student Testimonials</span></h1>
+                                <div id="testimonials-carousel" class="testimonials-carousel carousel slide">
+                                    <div class="carousel-inner">
+                                        <div class="item">
+                                            <blockquote class="quote">
+                                                <i class="fa fa-quote-left"></i>
+                                                I’m very happy interdum eget ipsum. Nunc pulvinar ut nulla eget sollicitudin. In hac habitasse platea dictumst. Integer mattis varius ipsum, posuere posuere est porta vel. Integer metus ligula, blandit ut fermentum a, rhoncus in ligula. Duis luctus.
+                                            </blockquote>
+                                            <div class="row">
+                                                <p class="people col-md-8 col-md-push-1"><span class="name">Md Rasel</span><br><span class="title">Curabitur commodo</span></p>
+                                                <img class="profile col-md-4" src="{% static "img/rasel.jpg" %}" alt="">
+                                            </div>
+                                        </div><!--//item-->
+                                        <div class="item">
+                                            <blockquote class="quote">
+                                                <i class="fa fa-quote-left"></i>
+                                                I'm very pleased commodo gravida ultrices. Sed massa leo, aliquet non velit eu, volutpat vulputate odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse porttitor metus eros, ut fringilla nulla auctor a.
+                                            </blockquote>
+                                            <div class="row">
+                                                <p class="people col-md-8 col-md-push-1"><span class="name">Marco Antonio</span><br><span class="title"> Gravida ultrices</span></p>
+                                                <img class="profile col-md-4" src="{% static "img/rasel.jpg" %}" alt="">
+                                            </div>
+                                        </div><!--//item-->
+                                        <div class="item active">
+                                            <blockquote class="quote">
+                                                <i class="fa fa-quote-left"></i>
+                                                I'm delighted commodo gravida ultrices. Sed massa leo, aliquet non velit eu, volutpat vulputate odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse porttitor metus eros, ut fringilla nulla auctor a.
+                                            </blockquote>
+                                            <div class="row">
+                                                <p class="people col-md-8 col-md-push-1"><span class="name">Kate White</span><br><span class="title"> Gravida ultrices</span></p>
+                                                <img class="profile col-md-4" src="{% static "img/rasel.jpg" %}" alt="">
+                                            </div>
+                                        </div><!--//item-->
+
+                                    </div><!--//carousel-inner-->
+                                    <div class="carousel-controls">
+                                        <a class="prev" href="#testimonials-carousel" data-slide="prev"><i class="fa fa-caret-left"></i></a>
+                                        <a class="next" href="#testimonials-carousel" data-slide="next"><i class="fa fa-caret-right"></i></a>
+                                    </div><!--//carousel-controls-->
+                                </div><!--//testimonials-carousel-->
+                            </section><!--//widget-->
+
+                        </aside>
+                    </div><!--//page-row-->
+                </div><!--//page-content-->
+            </div><!--//page-->
+        </div><!--//content-->
+    </div><!--//wrapper-->
+</div>
+{% endblock %}

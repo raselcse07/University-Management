@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "MainSite/header_link.html" %}
+</head>
+
+<body class="home-page">
+
+<!--Facebook Comment-->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> <!--Facebook Comment-->
+
+
+<div class="wrapper">
+
+        <!-- ******HEADER****** -->
+
+        {% include "MainSite/header.html" %}
+
+        <!-- ******NAV****** -->
+
+        {% include "MainSite/nav-bar.html" %}
+
+        <!-- ******CONTENT****** -->
+
+        {% block content %}
+        {% endblock %}
+
+    <!-- ******FOOTER****** -->
+    {% include "MainSite/footer.html" %}
+
+    <!-- Javascript -->
+
+    {% include "MainSite/script_file.html" %}
+</div>
+</body>
+</html>
+

@@ -1,0 +1,82 @@
+<nav class="main-nav" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button><!--//nav-toggle-->
+                </div><!--//navbar-header-->
+
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+
+                        {% url "home" as home %}
+                        {% url "Academic:dept_list" as dept_list %}
+                        {% url "Academic:course_list" as course_list %}
+                        {% url "student:result" as result %}
+                        {% url "student:student_login" as student_login %}
+                        {% url "teacher:teacher_list" as teacher_list %}
+                        {% url "teacher:teacher_login" as teacher_login %}
+
+                        {% if request.path == home %}
+                        <li class="active nav-item"><a href="{% url "home" %}">Home</a></li>
+                        {% else %}
+                        <li class="nav-item"><a href="{% url "home" %}">Home</a></li>
+                        {% endif %}
+
+                        {% if request.path == course_list or request.path == dept_list %}
+                        <li class=" active nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="">Academic <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url "Academic:dept_list" %}">Department</a></li>
+                                <li><a href="{% url "Academic:course_list" %}">Course</a></li>
+                            </ul>
+                        </li>
+                        {% else %}
+                         <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="{% url "Academic:academic" %}">Academic <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url "Academic:dept_list" %}">Department</a></li>
+                                <li><a href="{% url "Academic:course_list" %}">Course</a></li>
+                            </ul>
+                        </li>
+                        {% endif %}
+
+                        {% if request.path == result %}
+                        <li class="active nav-item"><a href="{% url "student:result" %}">Result</a></li>
+                        {% else %}
+
+                         <li class="nav-item"><a href="{% url "student:result" %}">Result</a></li>
+                         {% endif %}
+
+                        {% if request.path == student_login %}
+                        <li class="active nav-item"><a href="{% url "student:student_login" %}">Student Login</a></li>
+                        {% else %}
+
+                         <li class="nav-item"><a href="{% url "student:student_login" %}">Student Login</a></li>
+                         {% endif %}
+
+                        {% if request.path == teacher_list %}
+                        <li class="active nav-item"><a href="{% url "teacher:teacher_list" %}">Teacher List</a></li>
+                        {% else %}
+
+                         <li class="nav-item"><a href="{% url "teacher:teacher_list" %}">Teacher List</a></li>
+                         {% endif %}
+
+
+                        {% if request.path == teacher_login %}
+                        <li class="active nav-item"><a href="{% url "teacher:teacher_login" %}">Teacher Login</a></li>
+                        {% else %}
+
+                         <li class="nav-item"><a href="{% url "teacher:teacher_login" %}">Teacher Login</a></li>
+                         {% endif %}
+                   
+                            </ul>
+                        </li><!--//dropdown-->
+                        <li class="nav-item"><a href="contact.html">Contact</a></li>
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </div><!--//container-->
+        </nav><!--//main-nav-->

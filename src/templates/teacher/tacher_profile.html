@@ -1,0 +1,301 @@
+{% extends "MainSite/base.html" %}
+{% block content %}
+
+
+
+<div class="content container">
+    
+        <div class="content container">
+         <section class="news">
+           <div class="col-md-8 col-md-offset-2">
+
+           	<br>
+           	{% for ob in qs %}
+			<img src="{{ ob.teacher_image.url }}" width="200" height="200" /><br>
+
+			{% endfor %}
+             <font face="verdana" size="10">Personal Information</font><br><br>
+
+			 <table class="table table-bordered table-striped">
+			        <colgroup>
+			          <col class="col-md-5">
+			          <col class="col-md-7">
+			        </colgroup>
+			        <tbody>
+
+			       	{% for ob in qs %}
+
+			          <tr>
+			            <td><font face="verdana" size="4">Name</font></font></td>
+			            <td><font face="verdana" size="4">{{ ob.name }} </font></td>
+			          </tr>
+
+			          <tr>
+			            <td><font face="verdana" size="4">Role</font></td>
+			            <td><font face="verdana" size="4">{{ ob.role }}</font></td>
+			   		  </tr>
+
+			   		  <tr>
+			            <td><font face="verdana" size="4">Phone Number</font></td>
+			            <td><font face="verdana" size="4">{{ ob.mobile_number }}</font></td>
+			          </tr>
+
+			          <tr>
+			            <td><font face="verdana" size="4">Join Date</font></td>
+			            <td><font face="verdana" size="4">{{ ob.join_date }}</font></td>
+			          </tr>
+
+			          <tr>
+			            <td><font face="verdana" size="4">Email</font> </td>
+			            <td><font face="verdana" size="4">{{ ob.email }}</font></td>
+			          </tr>
+
+			         <tr>
+			            <td><font face="verdana" size="4">Depatment</font></td>
+			            <td><font face="verdana" size="4">{{ ob.dept_name }}</font></td>
+			          </tr>
+
+			         {% endfor %}
+			        </tbody>
+			</table>
+
+			<font face="verdana" size="10">Biography</font><br><br>
+			 <table class="table table-bordered table-striped">
+			        <colgroup>
+			          <col class="col-md-12">
+			          <col class="col-md-8">
+			        </colgroup>
+			        <tbody>
+
+			        {% for ob in qs %}
+
+			        <tr>
+			            <td><p style="text-align: justify;"><font face="verdana" size="4">{{ ob.biography}}</font></p></td>
+			          </tr>
+
+
+			        {% endfor %}
+
+			     </tbody>
+			</table>
+
+			<font face="verdana" size="10">Education</font><br><br>
+			 <table class="table table-bordered table-striped">
+			        <colgroup>
+			          <col class="col-md-12">
+			          <col class="col-md-8">
+			        </colgroup>
+			        <tbody>
+
+			        {% for ob in qs %}
+
+			        <tr>
+			            <td><p style="text-align: justify;"><font face="verdana" size="4">{{ ob.educational_background|linebreaks }}</font></p></td>
+			          </tr>
+
+
+			        {% endfor %}
+
+			     </tbody>
+			</table>
+
+			<font face="verdana" size="10">Research Interests</font><br><br>
+			 <table class="table table-bordered table-striped">
+			        <colgroup>
+			          <col class="col-md-12">
+			          <col class="col-md-8">
+			        </colgroup>
+			        <tbody>
+
+			        {% for ob in qs %}
+
+			        <tr>
+			            <td><p style="text-align: justify;"><font face="verdana" size="4">{{ ob.research_interests|linebreaks }}</font></p></td>
+			          </tr>
+
+
+			        {% endfor %}
+
+			     </tbody>
+			</table>
+
+
+			<font face="verdana" size="10">Active Research Project</font><br><br>
+			 <table class="table table-bordered table-striped">
+			        <colgroup>
+			          <col class="col-md-12">
+			          <col class="col-md-8">
+			        </colgroup>
+			        <tbody>
+
+			        {% for ob in qs %}
+
+			        <tr>
+			            <td><p style="text-align: justify;"><font face="verdana" size="4">{{ ob.active_research_project|linebreaks }}</font></p></td>
+			          </tr>
+
+
+			        {% endfor %}
+
+			     </tbody>
+			</table>
+
+			<font face="verdana" size="10">Previous Research Project</font><br><br>
+			 <table class="table table-bordered table-striped">
+			        <colgroup>
+			          <col class="col-md-12">
+			          <col class="col-md-8">
+			        </colgroup>
+			        <tbody>
+
+			        {% for ob in qs %}
+
+			        <tr>
+			            <td><p style="text-align: justify;"><font face="verdana" size="4">{{ ob.previous_research_project|linebreaks }}</font></p></td>
+			          </tr>
+
+
+			        {% endfor %}
+
+			     </tbody>
+			</table>
+
+
+			<font face="verdana" size="10">External Affiliations</font><br><br>
+			 <table class="table table-bordered table-striped">
+			        <colgroup>
+			          <col class="col-md-12">
+			          <col class="col-md-8">
+			        </colgroup>
+			        <tbody>
+
+			        {% for ob in qs %}
+
+			        <tr>
+			            <td><p style="text-align: justify;"><font face="verdana" size="4">{{ ob.external_affiliations|linebreaks }}</font></p></td>
+			          </tr>
+
+
+			        {% endfor %}
+
+			     </tbody>
+			</table>
+
+
+			<font face="verdana" size="10">Awards And Recognition</font><br><br>
+			 <table class="table table-bordered table-striped">
+			        <colgroup>
+			          <col class="col-md-12">
+			          <col class="col-md-8">
+			        </colgroup>
+			        <tbody>
+
+			        {% for ob in qs %}
+
+			        <tr>
+			            <td><p style="text-align: justify;"><font face="verdana" size="4">{{ ob.awards_and_recognition|linebreaks }}</font></p></td>
+			          </tr>
+
+
+			        {% endfor %}
+
+			     </tbody>
+			</table>
+
+
+			<font face="verdana" size="10">Selected Publications</font><br><br>
+			 <table class="table table-bordered table-striped">
+			        <colgroup>
+			          <col class="col-md-12">
+			          <col class="col-md-8">
+			        </colgroup>
+			        <tbody>
+
+			        {% for ob in qs %}
+
+			        <tr>
+			            <td><p style="text-align: justify;"><font face="verdana" size="4">{{ ob.selected_publications|linebreaks }}</font></p></td>
+			          </tr>
+
+
+			        {% endfor %}
+
+			     </tbody>
+			</table>
+
+
+
+			<font face="verdana" size="10">Conference Proceedings</font><br><br>
+			 <table class="table table-bordered table-striped">
+			        <colgroup>
+			          <col class="col-md-12">
+			          <col class="col-md-8">
+			        </colgroup>
+			        <tbody>
+
+			        {% for ob in qs %}
+
+			        <tr>
+			            <td><p style="text-align: justify;"><font face="verdana" size="4">{{ ob.conference_proceedings|linebreaks }}</font></p></td>
+			          </tr>
+
+
+			        {% endfor %}
+
+			     </tbody>
+			</table>
+
+
+			<font face="verdana" size="10">Teaching</font><br><br>
+			 <table class="table table-bordered table-striped">
+			        <colgroup>
+			          <col class="col-md-12">
+			          <col class="col-md-8">
+			        </colgroup>
+			        <tbody>
+
+			        {% for ob in qs %}
+
+			        <tr>
+			            <td><p style="text-align: justify;"><font face="verdana" size="4">{{ ob.teaching|linebreaks }}</font></p></td>
+			          </tr>
+
+
+			        {% endfor %}
+
+			     </tbody>
+			</table>
+
+			<font face="verdana" size="10">Graduate Supervision</font><br><br>
+			 <table class="table table-bordered table-striped">
+			        <colgroup>
+			          <col class="col-md-12">
+			          <col class="col-md-8">
+			        </colgroup>
+			        <tbody>
+
+			        {% for ob in qs %}
+
+			        <tr>
+			            <td><p style="text-align: justify;"><font face="verdana" size="4">{{ ob.graduate_supervision|linebreaks }}</font></p></td>
+			          </tr>
+
+
+			        {% endfor %}
+
+			     </tbody>
+			</table>
+
+           </div>
+
+         </section>
+    </div>
+    </div>
+
+
+
+
+<br>
+</div>
+
+{% endblock %}

@@ -1,0 +1,166 @@
+{% extends "MainSite/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="content container">
+<section class="news">
+    <div class="section-content">
+<h1 class="section-heading text-highlight"><span class="line">Overview</span></h1>
+<p>
+    {{ qs.description }}
+</p>
+</div>
+</section>
+
+<div class="row cols-wrapper">
+<div class="col-md-3">
+
+<section class="testimonials">
+
+    <h1 class="section-heading text-highlight"><span class="line">Messages from Head</span></h1>
+    <div class="section-content">
+        <div id="testimonials-carousel" class="testimonials-carousel carousel slide">
+            <div class="carousel-inner">
+                 <div class="item active">
+                        <blockquote class="quote">
+
+                            <p><i class="fa fa-quote-left"></i>
+
+                                {% if qs.short_name == "CSE" %}
+                                     Message from head of CSE Department.
+                                     Message from head of CSE Department
+                                     Message from head of CSE Department
+                                     Message from head of CSE Department
+                                     Message from head of CSE Department
+                                     Message from head of CSE Department
+                                 {% elif qs.short_name == "CE" %}
+                                    Message from head of CE Department
+                                 {% elif qs.short_name == "EEE" %}
+                                    Mesages from head of EEE Department
+                                {% endif %}
+                                <i class="fa fa-quote-right"></i>
+                            </p>
+
+                        </blockquote>
+                        <div class="row">
+
+                            {% if qs.short_name == "CSE" %}
+                            <p class="people col-md-8 col-sm-3 col-xs-8"><span class="name">Md Rasel</span><br /><span class="title">B.Sc(Engg.),PhD</span></p>
+                            <img class="profile col-md-4 pull-right" src="{% static "img/rasel.jpg" %}"  alt="" />
+                            {% elif qs.short_name == "CE" %}
+                            <p class="people col-md-8 col-sm-3 col-xs-8"><span class="name">Md Rasel</span><br /><span class="title">B.Sc(Engg.),PhD</span></p>
+                            <img class="profile col-md-4 pull-right" src="{% static "img/rasel.jpg" %}"  alt="" />
+                            {% else %}
+                            <p class="people col-md-8 col-sm-3 col-xs-8"><span class="name">Md Rasel</span><br /><span class="title">B.Sc(Engg.),PhD</span></p>
+                            <img class="profile col-md-4 pull-right" src="{% static "img/rasel.jpg" %}"  alt="" />
+                            {% endif %}
+
+                        </div>
+
+
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </section>
+
+</div>
+
+<div class="col-md-9">
+
+<section class="testimonials">
+
+    <h1 class="section-heading text-highlight"><span class="line">Curriculam</span></h1>
+    <div class="section-content">
+
+        {% if qs.short_name == "CSE"  %}
+        <img src="{% static "img/Academic/cse/csecorsedetail.png" %}" width="98%" height="95%">
+        {% elif qs.short_name == "CE" %}
+        <img src="{% static "img/Academic/ce/ce_course.png" %}" width="98%" height="95%">
+        {% endif %}
+    </div>
+</section>
+
+</div>
+</div>
+
+
+<div class="col-md-3">
+   <section class="news">
+      <h1 class="section-heading text-highlight"><span class="line">Full Course</span></h1>
+       <div class="section-content">
+       <ul type="disk">
+       <li><a href="http://127.0.0.1:8000/media/{{ qs.course_file }}" target="_blank">Full Course</a></li>
+       </ul>
+       </div>
+   </section>
+ </div>
+
+<section class="news">
+    <div class="section-content">
+        <h1 class="section-heading text-highlight"><span class="line">Members</span></h1>
+        <div class="carousel-controls">
+                    <a class="prev" href="#news-carousel" data-slide="prev"><i class="fa fa-caret-left"></i></a>
+                    <a class="next" href="#news-carousel" data-slide="next"><i class="fa fa-caret-right"></i></a>
+                </div>
+
+
+                <div class="section-content clearfix">
+                    <div id="news-carousel" class="news-carousel carousel slide">
+                        <div class="carousel-inner">
+                            <div class="item active">
+
+                                <div class="col-md-4 news-item">
+                                    <h2 class="title"><b><i>Dr. Jahir Bin Alam</i></b></h2>
+                                    <p>Professor</p>
+                                    <img class="thumb" src="{% static "img/news1.jpeg" %}"  alt="" />
+                                </div>
+
+                                <!--//news-item-->
+                                 <div class="col-md-4 news-item">
+                                    <h2 class="title"><b><i>Dr. Jahir Bin Alam</i></b></h2>
+                                    <p>Professor</p>
+                                    <img class="thumb" src="{% static "img/news1.jpeg" %}"  alt="" />
+                                </div>
+                                <!--//news-item-->
+
+                                <div class="col-md-4 news-item">
+                                    <h2 class="title"><b><i>Dr. Jahir Bin Alam</i></b></h2>
+                                    <p>Professor</p>
+                                    <img class="thumb" src="{% static "img/news1.jpeg" %}"  alt="" />
+                                </div>
+                            </div>
+                            <!--//item-->
+
+                            <div class="item">
+
+                                <div class="col-md-4 news-item">
+                                    <h2 class="title"><b><i>Dr. Jahir Bin Alam</i></b></h2>
+                                    <p>Professor</p>
+                                    <img class="thumb" src="{% static "img/news1.jpeg" %}"  alt="" />
+                                </div>
+
+                                <!--//news-item-->
+                                 <div class="col-md-4 news-item">
+                                    <h2 class="title"><b><i>Dr. Jahir Bin Alam</i></b></h2>
+                                    <p>Professor</p>
+                                    <img class="thumb" src="{% static "img/news1.jpeg" %}"  alt="" />
+                                </div>
+                                <!--//news-item-->
+
+                                <div class="col-md-4 news-item">
+                                    <h2 class="title"><b><i>Dr. Jahir Bin Alam</i></b></h2>
+                                    <p>Professor</p>
+                                    <img class="thumb" src="{% static "img/news1.jpeg" %}"  alt="" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+    </div>
+</section>
+</div>
+</div>
+{% endblock %}

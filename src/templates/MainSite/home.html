@@ -1,0 +1,322 @@
+{% extends "MainSite/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="content container">
+
+        {% include "MainSite/slider.html" %}
+        </div>
+        <br/>
+
+        <div class="content container">
+            <section class="promo box box-dark">
+                <div class="col-md-9">
+                <h1 class="section-heading">Why Sylhet Engineering College</h1>
+                    <p style="text-align: justify">Sylhet Engineering College (SEC) established in the year 2007 under the School of Applied Sciences & Technology, Shahjalal University of Science and Technology, is best of its kind with a motto to produce the best in class engineers for the 21st century. As a divisional city of Bangladesh, Sylhet had no full fledged undergraduate level engineering institute. So the Government of Peoples Republic of Bangladesh has established Sylhet Engineering College as an engineering faculty section of Shahjalal University of Science and Technology. </p>
+                </div>
+                <div class="col-md-3">
+                    <a class="btn btn-cta" href="#"><i class="fa fa-play-circle"></i>Apply Now</a>
+                </div>
+            </section><!--//promo-->
+
+            <!--News-->
+            <section class="news">
+                <h1 class="section-heading text-highlight"><span class="line">Latest News</span></h1>
+                <div class="carousel-controls">
+                    <a class="prev" href="#news-carousel" data-slide="prev"><i class="fa fa-caret-left"></i></a>
+                    <a class="next" href="#news-carousel" data-slide="next"><i class="fa fa-caret-right"></i></a>
+                </div><!--//carousel-controls-->
+
+
+                <div class="section-content clearfix">
+                    <div id="news-carousel" class="news-carousel carousel slide">
+                        <div class="carousel-inner">
+                            <div class="item active">
+
+                                <div class="col-md-4 news-item">
+                                    <h2 class="title"><a href="#">Admission Going On</a></h2>
+                                    <p>Admission of 2016-17 session is going on.You can apply online from 5 March,2017.</p>
+                                    <a class="read-more" href="#">Read more<i class="fa fa-chevron-right"></i></a>
+                                    <img class="thumb" src="{% static "img/news1.jpeg" %}"  alt="" />
+                                </div>
+
+                                <!--//news-item-->
+                                   <div class="col-md-4 news-item">
+                                    <h2 class="title"><a href="#">2nd Semester result published</a></h2>
+                                    <p>The result of 2nd semester finally published.You can check your result from website.</p>
+                                    <a class="read-more" href="#">Read more<i class="fa fa-chevron-right"></i></a>
+                                    <img class="thumb" src="{% static "img/news1.jpeg" %}"  alt="" />
+                                </div>
+                                <!--//news-item-->
+
+                                <div class="col-md-4 news-item">
+                                    <h2 class="title"><a href="#">2nd Semester result published</a></h2>
+                                    <p>The result of 2nd semester finally published.You can check your result from website.</p>
+                                    <a class="read-more" href="#">Read more<i class="fa fa-chevron-right"></i></a>
+                                    <img class="thumb" src="{% static "img/news1.jpeg" %}"  alt="" />
+                                </div>
+                            </div>
+
+                            <!--//item-->
+
+                            <div class="item">
+
+                                <div class="col-md-4 news-item">
+                                    <h2 class="title"><a href="#">Admission Going On</a></h2>
+                                    <p>Admission of 2016-17 session is going on.You can apply online from 5 March,2017.</p>
+                                    <a class="read-more" href="#">Read more<i class="fa fa-chevron-right"></i></a>
+                                    <img class="thumb" src="{% static "img/news1.jpeg" %}"  alt="" />
+                                </div>
+
+                                <!--//news-item-->
+                                   <div class="col-md-4 news-item">
+                                    <h2 class="title"><a href="#">2nd Semester result published</a></h2>
+                                    <p>The result of 2nd semester finally published.You can check your result from website.</p>
+                                    <a class="read-more" href="#">Read more<i class="fa fa-chevron-right"></i></a>
+                                    <img class="thumb" src="{% static "img/news1.jpeg" %}"  alt="" />
+                                </div>
+                                <!--//news-item-->
+
+                                <div class="col-md-4 news-item">
+                                    <h2 class="title"><a href="#">2nd Semester result published</a></h2>
+                                    <p>The result of 2nd semester finally published.You can check your result from website.</p>
+                                    <a class="read-more" href="#">Read more<i class="fa fa-chevron-right"></i></a>
+                                    <img class="thumb" src="{% static "img/news1.jpeg" %}"  alt="" />
+                                </div>
+                            </div>
+
+                        </div><!--//carousel-inner-->
+                    </div><!--//news-carousel-->
+                </div><!--//section-content-->
+            </section><!--//news-->
+
+            <!--Event-->
+            <div class="row cols-wrapper">
+                <div class="col-md-3">
+                    <section class="events">
+                        <h1 class="section-heading text-highlight"><span class="line">Events</span></h1>
+                        <div class="section-content">
+                            <div class="event-item">
+                                <p class="date-label">
+                                    <span class="month">FEB</span>
+                                    <span class="date-number">18</span>
+                                </p>
+                                <div class="details">
+                                    <h2 class="title">CSE DAY</h2>
+                                    <p class="time"><i class="fa fa-clock-o"></i>10:00am - 18:00pm</p>
+                                    <p class="location"><i class="fa fa-map-marker"></i>CSE Building,SEC</p>
+                                </div><!--//details-->
+                            </div><!--event-item-->
+                            <div class="event-item">
+                                <p class="date-label">
+                                    <span class="month">SEP</span>
+                                    <span class="date-number">06</span>
+                                </p>
+                                <div class="details">
+                                    <h2 class="title">E-learning at College Green</h2>
+                                    <p class="time"><i class="fa fa-clock-o"></i>10:00am - 16:00pm</p>
+                                    <p class="location"><i class="fa fa-map-marker"></i>Learning Center</p>
+                                </div><!--//details-->
+                            </div><!--event-item-->
+                            <div class="event-item">
+                                <p class="date-label">
+                                    <span class="month">JUN</span>
+                                    <span class="date-number">23</span>
+                                </p>
+                                <div class="details">
+                                    <h2 class="title">Career Fair</h2>
+                                    <p class="time"><i class="fa fa-clock-o"></i>09:45am - 16:00pm</p>
+                                    <p class="location"><i class="fa fa-map-marker"></i>Library</p>
+                                </div><!--//details-->
+                            </div><!--event-item-->
+                            <div class="event-item">
+                                <p class="date-label">
+                                    <span class="month">May</span>
+                                    <span class="date-number">17</span>
+                                </p>
+                                <div class="details">
+                                    <h2 class="title">Science Seminar</h2>
+                                    <p class="time"><i class="fa fa-clock-o"></i>14:00pm - 18:00pm</p>
+                                    <p class="location"><i class="fa fa-map-marker"></i>Library</p>
+                                </div><!--//details-->
+                            </div><!--event-item-->
+                            <a class="read-more" href="#">All events<i class="fa fa-chevron-right"></i></a>
+                        </div><!--//section-content-->
+                    </section><!--//events-->
+                </div><!--//col-md-3-->
+
+                <!--//Search Course-->
+
+                <div class="col-md-6">
+                    <section class="course-finder">
+                        <h1 class="section-heading text-highlight"><span class="line">Course Finder</span></h1>
+                        <div class="section-content">
+                            <form class="course-finder-form" action="#" method="GET">
+                                <div class="row">
+                                    <div class="col-md-10 col-sm-10 subject">
+                                        <select class="form-control subject" name="q">
+                                            <option value="Computer Science & Engineering">Computer Science & Engineering</option>
+                                            <option value="Electrical & Electronic Engineering">Electrical & Electronic Engineering</option>
+                                            <option value="Civil Engineering">Civil Engineering</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 keywords">
+                                        <button type="submit" class="btn btn-theme"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </form><!--//course-finder-form-->
+                            <a class="read-more" href="{% url "Academic:course_list" %}">View all our courses<i class="fa fa-chevron-right"></i></a>
+                        </div><!--//section-content-->
+                    </section><!--//course-finder-->
+
+                    <!--//Video-->
+                    <section class="video">
+                        <h1 class="section-heading text-highlight"><span class="line">Video Tour</span></h1>
+                        <div class="carousel-controls">
+                            <a class="prev" href="#videos-carousel" data-slide="prev"><i class="fa fa-caret-left"></i></a>
+                            <a class="next" href="#videos-carousel" data-slide="next"><i class="fa fa-caret-right"></i></a>
+                        </div><!--//carousel-controls-->
+                        <div class="section-content">
+                           <div id="videos-carousel" class="videos-carousel carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/WoB3MJH1M28" frameborder="0" allowfullscreen></iframe>
+                                    </div><!--//item-->
+                                    <div class="item">
+                                        <iframe class="video-iframe" src="//www.youtube.com/embed/RcGyVTAoXEU?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+                                    </div><!--//item-->
+                                    <div class="item">
+                                        <iframe class="video-iframe" src="//www.youtube.com/embed/Ks-_Mh1QhMc?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+                                    </div><!--//item-->
+                                </div><!--//carousel-inner-->
+                           </div><!--//videos-carousel-->
+                            <p class="description">Sylhet Engineering College</p>
+                        </div><!--//section-content-->
+                    </section><!--//video-->
+                </div>
+
+                <!--//Quick Links-->
+                <div class="col-md-3">
+                    <section class="links">
+                        <h1 class="section-heading text-highlight"><span class="line">Quick Links</span></h1>
+                        <div class="section-content">
+                            <p><a href="#"><i class="fa fa-caret-right"></i>E-learning Portal</a></p>
+                            <p><a href="#"><i class="fa fa-caret-right"></i>Gallery</a></p>
+                            <p><a href="#"><i class="fa fa-caret-right"></i>Job Vacancies</a></p>
+                            <p><a href="#"><i class="fa fa-caret-right"></i>Contact</a></p>
+                        </div><!--//section-content-->
+                    </section><!--//links-->
+
+                    <!--//testimonials-->
+
+                    <section class="testimonials">
+                        <h1 class="section-heading text-highlight"><span class="line"> Testimonials</span></h1>
+                        <div class="carousel-controls">
+                            <a class="prev" href="#testimonials-carousel" data-slide="prev"><i class="fa fa-caret-left"></i></a>
+                            <a class="next" href="#testimonials-carousel" data-slide="next"><i class="fa fa-caret-right"></i></a>
+                        </div><!--//carousel-controls-->
+                        <div class="section-content">
+                            <div id="testimonials-carousel" class="testimonials-carousel carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <blockquote class="quote">
+                                            <p><i class="fa fa-quote-left"></i>I’m very happy interdum eget ipsum. Nunc pulvinar ut nulla eget sollicitudin. In hac habitasse platea dictumst. Integer mattis varius ipsum, posuere posuere est porta vel. Integer metus ligula, blandit ut fermentum a, rhoncus in ligula. Duis luctus.</p>
+                                        </blockquote>
+                                        <div class="row">
+                                            <p class="people col-md-8 col-sm-3 col-xs-8"><span class="name">Marissa Spencer</span><br /><span class="title">Curabitur commodo</span></p>
+                                            <img class="profile col-md-4 pull-right" src="{% static "img/testimonials/image5.png" %}"  alt="" />
+                                        </div>
+                                    </div><!--//item-->
+                                    <div class="item">
+                                        <blockquote class="quote">
+                                            <p><i class="fa fa-quote-left"></i>
+                                            I'm very pleased commodo gravida ultrices. Sed massa leo, aliquet non velit eu, volutpat vulputate odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse porttitor metus eros, ut fringilla nulla auctor a.</p>
+                                        </blockquote>
+                                        <div class="row">
+                                            <p class="people col-md-8 col-sm-3 col-xs-8"><span class="name">Marco Antonio</span><br /><span class="title"> Gravida ultrices</span></p>
+                                            <img class="profile col-md-4 pull-right" src="{% static "img/testimonials/image5.png" %}"  alt="" />
+                                        </div>
+                                    </div><!--//item-->
+                                    <div class="item">
+                                        <blockquote class="quote">
+                                            <p><i class="fa fa-quote-left"></i>
+                                            I'm delighted commodo gravida ultrices. Sed massa leo, aliquet non velit eu, volutpat vulputate odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse porttitor metus eros, ut fringilla nulla auctor a.</p>
+                                        </blockquote>
+                                        <div class="row">
+                                            <p class="people col-md-8 col-sm-3 col-xs-8"><span class="name">Kate White</span><br /><span class="title"> Gravida ultrices</span></p>
+                                            <img class="profile col-md-4 pull-right" src="{% static "img/testimonials/image5.png" %}"  alt="" />
+                                        </div>
+                                    </div><!--//item-->
+
+                                </div><!--//carousel-inner-->
+                            </div><!--//testimonials-carousel-->
+                        </div><!--//section-content-->
+                    </section><!--//testimonials-->
+                </div><!--//col-md-3-->
+            </div><!--//cols-wrapper-->
+
+            <!--//Awards-->
+
+            <section class="awards">
+                <div id="awards-carousel" class="awards-carousel carousel slide">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <ul class="logos">
+                                <li class="col-md-2 col-sm-2 col-xs-4">
+                                    <a href="#"><img class="img-responsive" src="{% static "img/awards/awards.jpeg" %}"  alt="" /></a>
+                                </li>
+                                <li class="col-md-2 col-sm-2 col-xs-4">
+                                    <a href="#"><img class="img-responsive" src="{% static "img/awards/a2.jpeg" %}"  alt="" /></a>
+                                </li>
+                                <li class="col-md-2 col-sm-2 col-xs-4">
+                                    <a href="#"><img class="img-responsive" src="{% static "img/awards/a3.jpeg" %}"  alt="" /></a>
+                                </li>
+                                <li class="col-md-2 col-sm-2 col-xs-4">
+                                    <a href="#"><img class="img-responsive" src="{% static "img/awards/a4.jpeg" %}"  alt="" /></a>
+                                </li>
+                                <li class="col-md-2 col-sm-2 col-xs-4">
+                                    <a href="#"><img class="img-responsive" src="{% static "img/awards/a5.jpeg" %}"  alt="" /></a>
+                                </li>
+                                <li class="col-md-2 col-sm-2 col-xs-4">
+                                    <a href="#"><img class="img-responsive" src="{% static "img/awards/a6.jpeg" %}"  alt="" /></a>
+                                </li>
+                            </ul><!--//slides-->
+                        </div><!--//item-->
+
+                        <div class="item">
+                            <ul class="logos">
+                                <li class="col-md-2 col-sm-2 col-xs-4">
+                                    <a href="#"><img class="img-responsive" src="{% static "img/awards/awards.jpeg" %}"  alt="" /></a>
+                                </li>
+                                <li class="col-md-2 col-sm-2 col-xs-4">
+                                    <a href="#"><img class="img-responsive" src="{% static "img/awards/a2.jpeg" %}"  alt="" /></a>
+                                </li>
+                                <li class="col-md-2 col-sm-2 col-xs-4">
+                                    <a href="#"><img class="img-responsive" src="{% static "img/awards/a3.jpeg" %}"  alt="" /></a>
+                                </li>
+                                <li class="col-md-2 col-sm-2 col-xs-4">
+                                    <a href="#"><img class="img-responsive" src="{% static "img/awards/a4.jpeg" %}"  alt="" /></a>
+                                </li>
+                                <li class="col-md-2 col-sm-2 col-xs-4">
+                                    <a href="#"><img class="img-responsive" src="{% static "img/awards/a5.jpeg" %}"  alt="" /></a>
+                                </li>
+                                <li class="col-md-2 col-sm-2 col-xs-4">
+                                    <a href="#"><img class="img-responsive" src="{% static "img/awards/a6.jpeg" %}"  alt="" /></a>
+                                </li>
+                            </ul><!--//slides-->
+                        </div><!--//item-->
+                    </div><!--//carousel-inner-->
+                    <a class="left carousel-control" href="#awards-carousel" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="right carousel-control" href="#awards-carousel" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+
+                </div>
+            </section>
+        </div><!--//content-->
+    </div><!--//wrapper-->
+
+{% endblock %}

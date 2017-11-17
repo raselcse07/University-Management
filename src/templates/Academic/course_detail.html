@@ -1,0 +1,126 @@
+{% extends "MainSite/base.html" %}
+{% block content %}
+
+<div class="content container">
+
+        <div class="content container">
+            <div class="page-wrapper">
+                <header class="page-heading clearfix">
+                    <h1 class="heading-title pull-left">{{ qs.course_title }}</h1>
+                    <div class="breadcrumbs pull-right">
+                        <ul class="breadcrumbs-list">
+                            <li class="breadcrumbs-label">You are here:</li>
+                            <li><a href="{% url "home" %}">Home</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="{% url "Academic:course_list" %}">Course</a><i class="fa fa-angle-right"></i></li>
+                            <li class="current">{{ qs.course_title }}</li>
+                        </ul>
+                    </div><!--//breadcrumbs-->
+                </header>
+
+
+                <div class="page-content">
+                    <div class="row page-row">
+                        <div class="course-wrapper col-md-8 col-sm-7">
+                            <article class="course-item">
+
+                                {% if qs.course_image %}
+                                <p class="featured-image page-row"><img src="{{ qs.course_image.url }}" alt="" width="750px" height="400px"/></p>
+                                {% endif %}
+
+                                <div class="page-row box box-border">
+                                    <ul class="list-unstyled no-margin-bottom">
+                                        <li><strong>Duration:</strong> <em>6 Months</em></li>
+                                        <li><strong>Credit: </strong> <em>{{ qs.credit }}</em></li>
+                                        <li><strong>Semester: </strong> <em>{{ qs.semester }}</em></li>
+                                    </ul>
+                                </div><!--//page-row-->
+
+
+                                <div class="page-row">
+                                        <p>{{ qs.course_description|linebreaks }}</p>
+                                </div><!--//page-row-->
+
+                                <div class="tabbed-info page-row">
+                                    <ul class="nav nav-tabs">
+                                      <li class="active"><a href="#tab1" data-toggle="tab">Course structure</a></li>
+                                      <li><a href="#tab2" data-toggle="tab">Fees</a></li>
+                                      <li><a href="#tab3" data-toggle="tab">Course Instructor</a></li>
+                                    </ul>
+
+
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab1">
+
+                                            <p><b><i>{{ qs.course_detail|linebreaks }}</i></b></p>
+
+                                        </div>
+
+
+                                        <div class="tab-pane" id="tab2">
+                                            <p>If you want to register for this course then you should pay {{ qs.course_fees }}</p>
+                                        </div>
+
+
+                                        <div class="tab-pane" id="tab3">
+                                            <p><b><i>{{ qs.course_teacher|linebreaks }}</i></b></p>
+                                        </div>
+                                    </div>
+                                </div><!--//tabbed-info-->
+                            </article><!--//course-item-->
+                        </div><!--//course-wrapper-->
+
+
+                        <aside class="page-sidebar  col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1">
+                            <section class="widget has-divider">
+                                <h1 class="section-heading text-highlight"><span class="line">Reference Book</span></h1>
+                                <p style="padding-left: 10%">For this course you can follow this book.</p>
+                                <a class="btn btn-theme" href="http://127.0.0.1:8000/media/{{ qs.ref_book }}" target="_blank" style="margin-left: 26%"><i class="fa fa-download"></i>Download Book</a>
+                            </section><!--//widget-->
+
+                            <section class="widget has-divider">
+                                <h1 class="section-heading text-highlight"><span class="line">Enquire about this course</span></h1>
+                                <p style="padding-left: 10%">To know about this course please contact with below information</p>
+                                <p class="tel" style="padding-left: 10%"><i class="fa fa-phone"></i>Tel: 0800 123 4567</p>
+                                <p class="email" style="padding-left: 10%"><i class="fa fa-envelope"></i>Email: <a href="#">enquires@website.com</a></p>
+                            </section><!--//widget-->
+
+
+                            <section class="widget has-divider">
+                                <h1 class="section-heading text-highlight"><span class="line">Other Courses</span></h1>
+                                <ul style="padding-left: 15%">
+
+                                    {% for ob in qs2 %}
+                                        <li><a href="{% url "Academic:course_detail" ob.course_name %}">{{ ob.course_title }}</a></li>
+                                    {% endfor %}
+
+                                </ul>
+                            </section><!--//widget-->
+
+                            <section class="widget has-divider">
+                                <h1 class="section-heading text-highlight"><span class="line">Quick Links</span></h1>
+
+                               <div class="section-content">
+                                    <p><a href="#"><i class="fa fa-caret-right"></i>E-learning Portal</a></p>
+                                    <p><a href="#"><i class="fa fa-caret-right"></i>Gallery</a></p>
+                                    <p><a href="#"><i class="fa fa-caret-right"></i>Job Vacancies</a></p>
+                                    <p><a href="#"><i class="fa fa-caret-right"></i>Contact</a></p>
+                                </div><!--//section-content-->
+
+                            </section><!--//widget-->
+                        </aside>
+                    </div><!--//page-row-->
+                </div><!--//page-content-->
+            </div><!--//page-->
+        </div><!--//content-->
+
+
+        <div class="rows">
+            <div class="col-md-8 col-md-offset-1">
+                 <h1 class="section-heading text-highlight"><span class="line">Reviews</span></h1>
+                    <div class="fb-comments" data-href="{{ request.get_absolute_url }}" data-numposts="5"></div>
+            </div><!--//wrapper-->
+        </div>
+
+    </div>
+</div>
+{% endblock %}

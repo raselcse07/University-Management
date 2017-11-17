@@ -1,0 +1,145 @@
+{% extends "MainSite/base.html" %}
+{% block content %}
+
+
+<div class="content container">
+    
+        <div class="content container">
+         <section class="news">
+           <div class="col-md-8 col-md-offset-2">
+
+           	<br>
+			<img src="{{ qs.teacher_image.url }}" width="200" height="200" /><br>
+
+             <font face="verdana" size="10">Personal Information</font><br><br>
+
+			 <table class="table table-bordered table-striped">
+			        <colgroup>
+			          <col class="col-md-5">
+			          <col class="col-md-7">
+			        </colgroup>
+			        <tbody>
+
+			          <tr>
+			            <td><font face="verdana" size="4">Name</font></font></td>
+			            <td><font face="verdana" size="4">{{ qs.name }} </font></td>
+			          </tr>
+
+			          <tr>
+			            <td><font face="verdana" size="4">Role</font></td>
+			            <td><font face="verdana" size="4">{{qs.role }}</font></td>
+			   		  </tr>
+
+			   		  <tr>
+			            <td><font face="verdana" size="4">Department</font></td>
+			            <td><font face="verdana" size="4">{{ qs.dept_name }}</font></td>
+			          </tr>
+
+			          <tr>
+			            <td><font face="verdana" size="4">Fathers Name </font></td>
+			            <td><font face="verdana" size="4">{{ qs.fathers_name }}</font></td>
+			          </tr>
+
+			          <tr>
+			            <td><font face="verdana" size="4">Mothers Name</font> </td>
+			            <td><font face="verdana" size="4">{{ qs.mothers_name }}</font></td>
+			          </tr>
+
+			         <tr>
+			            <td><font face="verdana" size="4">Birthday</font></td>
+			            <td><font face="verdana" size="4">{{ qs.birthday }}</font></td>
+			          </tr>
+
+			           <tr>
+			            <td><font face="verdana" size="4">Blood Group</font></td>
+			            <td><font face="verdana" size="4">{{ qs.blood_group }}</font></td>
+			          </tr>
+
+
+			           <tr>
+			            <td><font face="verdana" size="4">Phone Number</font></td>
+			            <td><font face="verdana" size="4">{{ qs.mobile_number }}</font></td>
+			          </tr>
+
+
+			           <tr>
+			            <td><font face="verdana" size="4">Secrect Key</font></td>
+			            <td><font face="verdana" size="4">{{ qs.TrxID }}</font></td>
+			          </tr>
+
+
+			        </tbody>
+			</table>
+
+
+			<font face="verdana" size="19">Attendence</font><br><br>
+
+			<table class="table table-bordered table-striped">
+			    <colgroup>
+			          <col class="col-md-5">
+			          <col class="col-md-7">
+			        </colgroup>
+			    <thead>
+			        <th class="active"><font face="verdana" size="4">Date</font></th>
+			        <th class="active"><font face="verdana" size="4">Course</font></th>
+			        <th class="active"><font face="verdana" size="4">Attendence</font></th>
+			    </thead>
+			    <tbody>
+
+			    {% for obj in att %}
+			        <tr>
+			            <td class="success"><font face="verdana" size="4">{{ obj.class_date }}</font></td>
+			            <td class="success"><font face="verdana" size="4">{{ obj.course_name }}</font></td>
+
+			            {% if obj.is_attend is True %}
+			            <td class="success"><font face="verdana" size="4" color="green">&#10004;</font></td>
+			            {% else %}
+
+			            <td class="success"><font face="verdana" size="4" color="red">&#x2716;</font></td>
+
+			            {% endif %}
+
+			        </tr>
+
+			    {% endfor %}
+			    </tbody>
+			</table>
+
+
+			
+			<font face="verdana" size="19" color="red">Your Next CLass Schedule</font><br><br>
+
+			<table class="table table-bordered table-striped">
+			    <colgroup>
+			          <col class="col-md-5">
+			          <col class="col-md-7">
+			        </colgroup>
+			    <thead>
+			        <th class="active"><font face="verdana" size="4">Class Date</font></th>
+			        <th class="active"><font face="verdana" size="4">Course List</font></th>
+			        <th class="active"><font face="verdana" size="4">Class Time</font></th>
+			    </thead>
+			    <tbody>
+
+			    {% for obj in rem %}
+			        <tr>
+			            <td class="success"><font face="verdana" size="4">{{ obj.class_date }}</font></td>
+			            <td class="success"><font face="verdana" size="4">{{ obj.course_list }}</font></td>
+			            <td class="success"><font face="verdana" size="4">{{ obj.class_time }}</font></td>
+
+			        </tr>
+
+			    {% endfor %}
+			    </tbody>
+			</table>
+
+
+           </div>
+
+         </section>
+    </div>
+    </div>
+    <br>
+ </div>
+
+{% endblock %}

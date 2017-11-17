@@ -1,0 +1,113 @@
+{% extends "MainSite/base.html" %}
+{% block content %}
+
+
+<div class="content container">
+    
+        <div class="content container">
+         <section class="news">
+           <div class="col-md-8 col-md-offset-2">
+             <font face="verdana" size="10">Personal Information</font><br><br>
+
+			 <table class="table table-bordered table-striped">
+			        <colgroup>
+			          <col class="col-md-5">
+			          <col class="col-md-7">
+			        </colgroup>
+			        <tbody>
+
+			          <tr>
+			            <td><font face="verdana" size="4">Name</font></font></td>
+			            <td><font face="verdana" size="4">{{ match_result.name }} </font></td>
+			          </tr>
+
+			          <tr>
+			            <td><font face="verdana" size="4">Registration Number</font></td>
+			            <td><font face="verdana" size="4">{{ match_result.reg_number }}</font></td>
+			   		  </tr>
+
+			   		  <tr>
+			            <td><font face="verdana" size="4">Department</font></td>
+			            <td><font face="verdana" size="4">{{ match_result.dept_name }}</font></td>
+			          </tr>
+
+			          <tr>
+			            <td><font face="verdana" size="4">Fathers Name </font></td>
+			            <td><font face="verdana" size="4">{{ match_result.fathers_name }}</font></td>
+			          </tr>
+
+			          <tr>
+			            <td><font face="verdana" size="4">Mothers Name</font> </td>
+			            <td><font face="verdana" size="4">{{ match_result.mothers_name }}</font></td>
+			          </tr>
+
+			         <tr>
+			            <td><font face="verdana" size="4">Semester</font></td>
+			            <td><font face="verdana" size="4">{{ match_result.semester }}</font></td>
+			          </tr>
+
+			           <tr>
+			            <td><font face="verdana" size="4">Session</font></td>
+			            <td><font face="verdana" size="4">{{ match_result.session }}</font></td>
+			          </tr>
+
+
+			        </tbody>
+			</table>
+
+			<font face="verdana" size="19">Course Wise CGPA</font><br><br>
+
+			<table class="table table-bordered table-striped">
+			    <colgroup>
+			          <col class="col-md-5">
+			          <col class="col-md-7">
+			        </colgroup>
+			    <thead>
+			        <th class="active"><font face="verdana" size="4">Course</font></th>
+			        <th class="active"><font face="verdana" size="4">CGPA</font></th>
+			    </thead>
+			    <tbody>
+
+			    {% for obj in register_course_info %}
+			        <tr>
+			            <td class="success"><font face="verdana" size="4">{{ obj.course_name }}</font></td>
+			            <td class="success"><font face="verdana" size="4">{{ obj.course_CGPA }}</font></td>
+			        </tr>
+
+			    {% endfor %}
+			    </tbody>
+			</table>
+			<font face="verdana" size="19">Total CGPA & Grade</font><br><br>
+			<table class="table table-bordered table-striped">
+			        <colgroup>
+			          <col class="col-md-5">
+			          <col class="col-md-7">
+			        </colgroup>
+			        <tbody>
+			        {% for ob in CGPA %}
+			        <tr>
+			            <td><font face="verdana" size="4">Total CGPA</font></td>
+			            <td><font face="verdana" size="4">{{ ob.total_CGPA }}</font></td>
+			        </tr>
+			         <tr>
+			            <td><font face="verdana" size="4">Grade</font></td>
+			            <td><font face="verdana" size="4">{{ ob.grade }}</font></td>
+			        </tr>
+
+			        {%endfor%}
+
+			</tbody>
+			</table>
+
+           </div>
+
+         </section>
+        <div class="col-md-5 col-md-offset-5">
+             <a href="{% url "student:result" %}" class="btn btn-success">Search Again</a>
+        </div>
+    </div>
+    </div>
+    <br>
+ </div>
+
+{% endblock %}

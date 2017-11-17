@@ -1,0 +1,23 @@
+{% extends "MainSite/base.html" %}
+
+{% block content %}
+
+    <div class="content container">
+        
+        <div class="content container">
+         <section class="news">
+           <div class="col-md-8 col-md-offset-3">
+           <font face="verdana" size="10" color="red">Not Found!!!</font><br>
+           <font face="verdana" size="10">Make sure you enter a valid Registration Number or Secret Key</font>
+               
+            </div>
+
+         </section>
+        <div class="col-md-5 col-md-offset-5">
+             <a href="{% url "student:result" %}" class="btn btn-success">Search Again</a>
+        </div>
+    </div>
+    </div>
+    <br>
+</div>
+{% endblock %}

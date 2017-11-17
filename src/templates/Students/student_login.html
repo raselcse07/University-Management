@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Student Login</title>
+
+<style>
+pre {
+    width: 700px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+
+input{
+
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+}
+
+select{
+
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 700px;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin:0 auto;
+    width: 700px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    background-color:#0659e9;
+    width: 750px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+h1{
+    color:red;
+    text-align:center;
+}
+
+</style>
+</head>
+<body>
+  
+<ul>
+  <li><a class="active" href="{% url "home" %}">Home</a></li>
+  <li><a href="#about" onclick="About()">About</a></li>
+  <li><a href="#contact" onclick="Contact()">Contact</a></li>
+</ul>
+<br>
+<div>
+
+    <font face="verdana" size="10">Student Login</font>
+  
+     <form action=" " method="POST">{% csrf_token %}
+
+        <pre>
+
+       <font face="verdana" size="4">{{ form.Reg_No.label }}</font>        {{ form.Reg_No }}
+       <font face="verdana" size="4">{{ form.secret_key.label }}</font>                    {{ form.secret_key }}
+
+
+        </pre>
+
+
+    <button type="submit">Login</button>
+
+    </form>
+
+</div>
+
+
+<script>
+function Contact() {
+    alert("You can contact with us.\nMobile: +008801630603018\nEmail:rasel@reviewtalkiez.com");
+}
+
+function About() {
+    alert("This is a Web Application developed by Md Rasel");
+}
+
+
+</script>
+</body>
+</html>

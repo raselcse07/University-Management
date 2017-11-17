@@ -1,0 +1,41 @@
+{% extends "MainSite/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="content container">
+
+
+<section class="news">
+    <h1 class="section-heading text-highlight"><span class="line">Departments</span></h1>
+    <div class="col-md-12 col-md-12-offset">
+        <p>
+            The academic departments of the university offer degree programs in different engineering, architecture, planning, and science disciplines. All the departments except Dept. of Humanities have the postgraduate programs, while the departments of Architecture, Urban and Regional Planning, Civil Engineering, Water Resources Engineering, Electrical and Electronic Engineering, Computer Science and Engineering, Chemical Engineering, Materials and Metallurgical Engineering, Petroleum and Mineral Resources Engineering, Mechanical Engineering, Naval Architecture and Marine Engineering, Industrial and Production Engineering offer undergraduate degree programs. There are the following sixteen departments under five faculties.
+        </p>
+    </div>
+
+</section>
+
+{% for ob in qs %}
+<section class="news">
+    <h1 class="section-heading text-highlight"><span class="line">Department of {{ ob }}</span></h1>
+
+    <div class="col-md-4 col-md-4-offset">
+        {% if ob.short_name == "CSE" %}
+            <img src="{% static "img/Academic/cse/cse.jpg" %}" width="1100px" height="300px"/>
+        {% elif ob.short_name == "CE" %}
+              <img src="{% static "img/Academic/ce/ce.jpg" %}" width="1100px" height="300px"/>
+        {% elif ob.short_name == "EEE" %}
+            <img src="{% static "img/Academic/eee/eee.jpg" %}" width="1100px" height="300px"/>
+        {% endif %}
+        <br>
+        <br>
+        <a href="{% url "Academic:dept_detail" ob.short_name %}" style="color: red">More About {{ ob }}</a>
+    </div>
+
+
+</section>
+{% endfor %}
+</div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,61 @@
+{% extends "MainSite/base.html" %}
+{% block content %}
+
+
+<div class="content container">
+    
+        <div class="content container">
+         <section class="news">
+           <div class="col-md-8 col-md-offset-2">
+
+            <font face="verdana" size="10">Teacher List</font><br><br>
+            <br>
+            <form method="GET" action="">
+
+
+                    <select name="q" class="form-control">
+                        <option value="Computer Science & Engineering">Computer Science & Engineering</option>
+                        <option value="Electrical & Electronic Engineering">Electrical & Electronic Engineering</option>
+                        <option value="Civil Engineering">Civil Engineering</option>
+                    </select>
+                    <br>
+                    <input type="Submit" value="Search" class="btn btn-primary form-control">
+                            
+            </form>
+            <br>
+            <table class="table table-bordered table-striped">
+             <colgroup>
+                      <col class="col-md-1">
+                      <col class="col-md-5">
+                    </colgroup>
+                <thead>
+                    <th class="active"><font face="verdana" size="4">No</font></th>
+                    <th class="active"><font face="verdana" size="4">Name</font></th>
+                    <th class="active"><font face="verdana" size="4">Department</font></th>
+                    <th class="active"><font face="verdana" size="4">Role</font></th>
+                </thead>
+                <tbody>
+
+                    {% for ob in qs %}
+                    <tr>
+                        <td><font face="verdana" size="4" >{{ forloop.counter }}</font></td>
+
+                        <td><font face="verdana" size="4" ><a style="color:green" href="{% url "teacher:teacher_profile" ob.role %}" >{{ ob.name }}</a></font></td>
+                
+                        <td><font face="verdana" size="4"><a style="color:green" href="{% url "teacher:teacher_profile" ob.role %}">{{ ob.dept_name }}</a></font></td>
+                 
+                        <td><font face="verdana" size="4"><a style="color:green" href="{% url "teacher:teacher_profile" ob.role %}">{{ ob.role }}</a></font></td>
+
+                    </tr>
+                    {% endfor %}
+               
+                    
+
+                </tbody>
+            </table>
+            </div>
+        </section>
+        </div>
+    </div>
+</div>
+{% endblock %}

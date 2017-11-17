@@ -1,0 +1,26 @@
+{% extends "MainSite/base.html" %}
+
+{% block content %}
+
+    <div class="content container">
+       <h1 align="center" style="color: red">Search Result</h1>
+        <div class="content container">
+         <section class="news">
+           <div class="col-md-8 col-md-offset-3">
+               {% for ob in qs %}
+
+                <a href="{% url "Academic:course_detail" ob.course_name %}" style="color: black" class="btn btn-info">
+                    {{ ob }}
+                </a>
+
+                {% endfor %}
+            </div>
+
+         </section>
+        <div class="col-md-5 col-md-offset-5">
+             <a href="{% url "home" %}" class="btn btn-success">Search Again</a>
+        </div>
+    </div>
+    </div>
+    <br>
+{% endblock %}
